@@ -1,9 +1,15 @@
-import React from 'react'
+import { ReactNode, ButtonHTMLAttributes } from 'react';
 
-const Button = () => {
-  return (
-    <button> </button>
-  )
+type ButtonProps = {
+    children?: ReactNode;
+} & ButtonHTMLAttributes<HTMLButtonElement>;
+  
+const Button = ({ children, ...props }: ButtonProps) => {
+return (
+    <button className='bg-green-600 px-8 py-3 rounded-full'>
+        {children}
+    </button>
+)
 }
 
 
