@@ -8,10 +8,14 @@ module.exports = {
     safelist: [],
     theme: {
       extend: {
-            fontFamily: {
-              sans: ['var(--font-inter)'], // sets Inter as default sans
-              inter: ['var(--font-inter)'],
-            },
+        fontFamily: {
+          sans: ['var(--font-inter)'], // sets Inter as default sans
+          inter: ['var(--font-inter)'],
+        },
+        colors: {
+          background: 'var(--background)',
+          foreground: 'var(--foreground)',
+        },
           },
     },
     plugins: [],
