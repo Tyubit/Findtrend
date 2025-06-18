@@ -13,9 +13,14 @@ export default function Home() {
         <div className="z-10 relative flex flex-col text-center justify-center mx-7 mt-20">
           <h1 className="text-white font-bold text-4xl whitespace-nowrap tracking-tight">Minimize your tabs.</h1>
           <h1 className="text-white text-4xl whitespace-nowrap tracking-tight">Find the trends!</h1>
-          <p className="text-[#8B8B8B] text-[14px] mt-4">Don’t let your computer memories consumes all of those browser tabs.<br/>Findtrend let you gathers all of your favorite website into one place.</p>
-          <Button className="mx-[90px] mt-8 whitespace-nowrap text-[14px]">Get Started 🔥</Button>
-          <HeaderCard icon="/LogoFace.svg" title="Product Design - Search" />
+          <p className="text-[#8B8B8B] text-[14px]">Don’t let your computer memories consumes all of those browser tabs.<br/>Findtrend let you gathers all of your favorite website into one place.</p>
+          <Button className="mx-[90px] mt-8 whitespace-nowrap text-[14px mb-5]">Get Started 🔥</Button>
+          <div className="flex flex-col-reverse pt-[70px]">
+            <HeaderCard icon="/LogoFace.svg" title="Product Design - Search" className="rotate-2 drop-shadow-xl/50"/>
+            <HeaderCard icon="/LogoFace.svg" title="Product Design - Search" className="-rotate-2  drop-shadow-xl/50"/>
+            <HeaderCard icon="/LogoFace.svg" title="Product Design - Search" className="rotate-2 drop-shadow-xl/50"/>
+            <HeaderCard icon="/LogoFace.svg" title="Product Design - Search" className="-rotate-4 drop-shadow-xl/50"/>
+          </div>
         </div>
 
         {/* background */}
