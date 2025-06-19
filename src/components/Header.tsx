@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
-import { MdClose } from "react-icons/md";
 import Button from './Buttons'
 
 
@@ -40,18 +39,18 @@ export const Header = () => {
         }
     },[menuOpen])
 return (
-    <header className='relative flex flex-col md:flex-row md:items-center md:justify-center mx-4 z-10 text-background'>
-        <div className='flex justify-between items-center'>
+    <header className='relative z-20 flex flex-col md:flex-row md:items-center md:justify-center mx-4 z-0 text-background'>
+        <div className='relative z-50 flex justify-between items-center'>
             <img src="/logo.svg" alt="Logo" className='md:hidden' />
             
-            <button className='md:hidden flex flex-col gap-1 w-6 aspect-square justify-center' onClick={() => setMenuOpen(!menuOpen)}>
+            <button className='md:hidden flex flex-col gap-1 w-6 aspect-square justify-center cursor-pointer' onClick={() => setMenuOpen(!menuOpen)}>
                 <span ref={topLine} className="w-5 h-0.5 bg-background"></span>
                 <span ref={btmLine} className="w-5 h-0.5 bg-background"></span>
             </button>
         </div>
 
         {menuOpen && (
-            <nav className='flex flex-col justify-center gap-10 pt-24 pb-20'>
+            <nav className='fixed  inset-0 z-40 flex flex-col justify-center gap-10 pt-24 pb-20 bg-black'>
                 <button>About</button>
                 <button>How It Works</button>
                 <button>Pricing</button>
