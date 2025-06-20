@@ -7,7 +7,7 @@ type HeaderCard = {
 }
 export const HeaderCard = ({icon,title,className}:HeaderCard) => {
 return (
-    <div className={`z-10 relative flex items-center bg-[#181818] w-[320px] py-3 pr-3 overflow-x-hidden  ${className} scroll`}>
+    <div className={`z-10 relative flex items-center bg-[#181818] py-3 pr-3 overflow-x-hidden  ${className}`}>
         <img src={icon} alt="social icon" className='aspect-square pl-4'/>
         <h3 className='text-white pl-3 text-[23px] whitespace-nowrap'>{title}</h3>
         <button className='flex flex-col justify-center items-center h-full w-12 absolute right-0'>
