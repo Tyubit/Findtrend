@@ -3,9 +3,21 @@ import Image from "next/image";
 import { Header } from "@/components/Header";
 import Button from "@/components/Buttons";
 import { HeaderCard } from "@/components/HeaderCard";
+import { XSlider } from "@/components/XSlider";
+
+const LogoPaths = ['/LogoDrib.svg','/LogoFace.svg','/LogoPint.svg','/LogoTwit.svg','/logoIn.svg'];
 export default function Home() {
+  const imageComponents = LogoPaths.map((name, index) => (
+    <img
+      key={index}
+      src={`${name}`} // This is relative to `public/`
+      alt={`Image ${index}`}
+      className="w-8 h-auto"
+    />
+  ));
   return (
     <div className="overflow-x-hidden">
+      {/* Hero */}
       <div className=" relative pt-6">
         <Header/>
 
@@ -59,10 +71,14 @@ export default function Home() {
       <div className="flex flex-col  justify-center items-center font-extrabold text-4xl mt-20 px-4">
         <p>Findtrend helps you to increase your<br/>productivity and reduce your computer's<br/>memory load,<span className="text-[#ADADAD]"> an application that can<br />fulfill your daily browsing needs.</span></p>
         <h1 className="text-center mt-40">Findtrend make +1000 Startup grow</h1>
+    
       </div>
+
       {/* How It Works */}
       <div>
-        How It Works
+        <h1 className="text-center mt-40">All platform connect to Findtrend</h1>
+        <XSlider list={imageComponents}/>
+        <Button className="bg-black text-white px-6">View More Trend</Button>
       </div>
       {/* Pricing */}
       <div>
