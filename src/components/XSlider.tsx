@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 type XSliderProps = {
-    scrollStyle?: string,
+    sliderStyle?: string,
     itemStyle?: string,
     list: ReactNode[];
 };
@@ -10,15 +10,14 @@ type XSliderProps = {
  * @param list List of items in the Scroll
  * @param scrollStyle Style of whole section
  * @param itemStyle Style of every item in the Scroll
- * @returns 
  */
-export const XSlider = ({ list,scrollStyle ='',itemStyle ='' }: XSliderProps) => {
+export const XSlider = ({ list,sliderStyle: scrollStyle,itemStyle }: XSliderProps) => {
 return (
     <ul className={`flex flex-row overflow-y-auto hide-scrollbar ${scrollStyle}`}>
         {list.map((item, index) => (
-            <li key={index} className={`flex items-center  justify-center min-w-[100px] ${itemStyle}`}>
+            <li key={index} className={`flex min-w-[64px] ${itemStyle}`}>
             {item}
-        </li>
+            </li>
         ))}
     </ul>
 )
